@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Assessment - Introduction to Computer</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+        
+        .container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            width: 90%;
+            max-width: 500px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #333;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-size: 24px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        h1:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(to right, #4776E6, #8E54E9);
+        }
+        
+        .btn {
+            background: linear-gradient(to right, #4776E6, #8E54E9);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 15px 30px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            outline: none;
+            margin-top: 20px;
+            font-weight: 600;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .info-text {
+            color: #666;
+            margin: 20px 0;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        .icon {
+            display: block;
+            margin: 0 auto 20px;
+            width: 70px;
+            height: 70px;
+        }
+    </style>
+    <script>
+        function openForm() {
+            var password = prompt("Enter the password to access the assessment:", "");
+            var correctPassword = "55555"; // Set your password
+            if (password === correctPassword) {
+                window.open("https://forms.gle/XFVL8bVsKmL1kd5eA", "_blank"); // Replace with your Google Form link
+            } else if (password !== null) {
+                alert("Incorrect password. Access denied.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <img src="/api/placeholder/70/70" alt="Computer Icon" class="icon" />
+        <h1>First Assessment - Introduction to Computer</h1>
+        <p class="info-text">
+            Click the button below to access your assessment. You will need to enter the provided password to proceed.
+        </p>
+        <button type="button" onclick="openForm()" class="btn">
+            Start Assessment
+        </button>
+        <p class="info-text" style="margin-top: 30px; font-size: 12px;">
+            Please ensure you have sufficient time to complete the assessment once started.
+        </p>
+    </div>
+</body>
+</html>
